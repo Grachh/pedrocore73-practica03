@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .contenedor {
+            border: 5px solid orange;
+            width: calc(100vw - 40px);
+            height: calc(100vh - 40px);
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+
+        }
+        .caja {
+            height: 180px;
+            width: 180px;
+            background-color: crimson;
+            margin: 20px;
+        }
+
+        #ultima {
+            align-self: flex-end;
+        }
+    </style>
+    <div class="contenedor">
+        <div class="caja"></div>
+        <div class="caja"></div>
+        <div class="caja" id="ultima"></div>
+    </div>
+</body>
+</html>
